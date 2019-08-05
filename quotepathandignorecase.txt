@@ -1,0 +1,5 @@
+1.文件名乱码
+使用git查看文件修改等操作时，如果文件名是中文，会显示形如123\456\789.txt的形式，需将core.quotepath设置为false，此时就不会对0×80以上的字符进行quote，中文显示恢复正常。
+相关命令：git config --global core.quothpath false
+2.忽略大小写
+git默认对文件名大小写不敏感，这样容易造成错误，因此重新配置为大小写敏感：git config --global core.ignorecase false
